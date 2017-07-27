@@ -22,9 +22,6 @@ Plug 'https://github.com/pangloss/vim-javascript.git'
 " NERDTree
 Plug 'https://github.com/scrooloose/nerdtree.git'
 
-" NERDTree-tabs
-Plug 'jistr/vim-nerdtree-tabs'
-
 " NERDTree-git-plugin
 Plug 'Xuyuanp/nerdtree-git-plugin'
 

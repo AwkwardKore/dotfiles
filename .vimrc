@@ -10,8 +10,11 @@ Plug 'cakebaker/scss-syntax.vim'
 " Ruby syntax
 Plug 'vim-ruby/vim-ruby'
 
+" Rails plugin
+Plug 'https://github.com/tpope/vim-rails.git'
+
 " Python syntax
-Plug 'https://github.com/hdima/python-syntax.git'
+Plug 'kh3phr3n/python-syntax'
 
 " Javascript syntax
 Plug 'https://github.com/pangloss/vim-javascript.git'
@@ -24,6 +27,12 @@ Plug 'jistr/vim-nerdtree-tabs'
 
 " NERDTree-git-plugin
 Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Use vim-airline for status bar
+Plug 'vim-airline/vim-airline'
+
+" Use gitgutter for git information on editor
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -42,5 +51,12 @@ let g:nerdtree_tabs_open_on_console_startup=1
 " Display line numbers by default
 set number
 
-"Enable all python highlight
+" Enable all python highlight
 let python_highlight_all=1
+
+" Fix autoindentation for using spaces
+set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
+
+" Display character on end-of-line
+"set listchars=eol:¬
+"set list

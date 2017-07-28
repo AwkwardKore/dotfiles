@@ -35,6 +35,7 @@ call plug#end()
 
 " Load NERDTree on startup
 autocmd vimenter * NERDTree
+autocmd VimEnter * wincmd p
 
 " Show hidden files on NERDTree
 let NERDTreeShowHidden=1
@@ -60,3 +61,9 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 " Fix backspace problems
 set backspace=indent,eol,start
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled=1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod=':t'

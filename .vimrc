@@ -67,3 +67,11 @@ let g:airline#extensions#tabline#enabled=1
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod=':t'
+
+" Show end of line character
+set listchars=eol:¬
+set list
+
+" Use relative number
+set relativenumber
+set number

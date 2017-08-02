@@ -55,10 +55,6 @@ let python_highlight_all=1
 " Fix autoindentation for using spaces
 set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
 
-" Display character on end-of-line
-"set listchars=eol:¬
-"set list
-
 " Fix backspace problems
 set backspace=indent,eol,start
 

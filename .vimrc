@@ -40,14 +40,8 @@ autocmd VimEnter * wincmd p
 " Show hidden files on NERDTree
 let NERDTreeShowHidden=1
 
-" Hide certain files on NERDTree
+" Hide specific files on NERDTree
 let NERDTreeIgnore=['\.DS_Store$', '\.swp$']
-
-" Open NERDTree-tabs on startup
-let g:nerdtree_tabs_open_on_console_startup=1
-
-" Display line numbers by default
-set number
 
 " Enable all python highlight
 let python_highlight_all=1
@@ -58,10 +52,10 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
 " Fix backspace problems
 set backspace=indent,eol,start
 
-" Enable the list of buffers
+" Enable buffer list
 let g:airline#extensions#tabline#enabled=1
 
-" Show just the filename
+" Show only the filename on buffer list
 let g:airline#extensions#tabline#fnamemod=':t'
 
 " Show end of line character

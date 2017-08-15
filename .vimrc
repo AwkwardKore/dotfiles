@@ -19,6 +19,9 @@ Plug 'kh3phr3n/python-syntax'
 " Javascript syntax
 Plug 'https://github.com/pangloss/vim-javascript.git'
 
+" JSX syntax
+Plug 'mxw/vim-jsx'
+
 " NERDTree
 Plug 'https://github.com/scrooloose/nerdtree.git'
 
@@ -30,6 +33,9 @@ Plug 'vim-airline/vim-airline'
 
 " Use gitgutter for git information on editor
 Plug 'airblade/vim-gitgutter'
+
+" Use ctrl p for fuzzy finder
+Plug 'kien/ctrlp.vim'
 
 call plug#end()
 

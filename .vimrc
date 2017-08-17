@@ -71,3 +71,6 @@ set list
 " Use relative number
 set relativenumber
 set number
+
+" Display line on current line
+set cursorline

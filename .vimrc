@@ -47,7 +47,7 @@ autocmd VimEnter * wincmd p
 let NERDTreeShowHidden=1
 
 " Hide specific files on NERDTree
-let NERDTreeIgnore=['\.DS_Store$', '\.swp$']
+let NERDTreeIgnore=['\.DS_Store$', '\.swp$', '\.git$']
 
 " Enable all python highlight
 let python_highlight_all=1

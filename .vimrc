@@ -39,6 +39,9 @@ Plug 'kien/ctrlp.vim'
 
 call plug#end()
 
+" Enable jsx syntax on .js files
+let g:jsx_ext_required = 0
+
 " Load NERDTree on startup
 autocmd vimenter * NERDTree
 autocmd VimEnter * wincmd p

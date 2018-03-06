@@ -68,7 +68,7 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
 
 " Show end of line character
-set listchars=eol:¬,tab:→\ 
+set listchars=tab:→\ ,trail:·
 set list
 
 " Use relative number

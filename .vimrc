@@ -56,7 +56,7 @@ let NERDTreeIgnore=['\.DS_Store$', '\.swp$', '\.git$']
 let python_highlight_all=1
 
 " Fix autoindentation for using spaces
-set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 " Fix backspace problems
 set backspace=indent,eol,start
@@ -68,7 +68,7 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
 
 " Show end of line character
-set listchars=eol:¬
+set listchars=eol:¬,tab:→\ 
 set list
 
 " Use relative number

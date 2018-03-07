@@ -80,3 +80,6 @@ set cursorline
 
 " Start scrolling 5 lines before border
 set scrolloff=5
+
+" Change terminal's title
+set title

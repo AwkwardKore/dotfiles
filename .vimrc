@@ -37,6 +37,9 @@ Plug 'airblade/vim-gitgutter'
 " Use ctrl p for fuzzy finder
 Plug 'kien/ctrlp.vim'
 
+" Git wrapper
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 " Enable jsx syntax on .js files

@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " HTML syntax
-Plug 'othree/html5.vim' 
+Plug 'othree/html5.vim'
 
 " CSS and SCSS syntax
 Plug 'JulesWang/css.vim'
@@ -77,3 +77,6 @@ set number
 
 " Display line on current line
 set cursorline
+
+" Start scrolling 5 lines before border
+set scrolloff=5

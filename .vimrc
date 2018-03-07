@@ -83,3 +83,13 @@ set scrolloff=5
 
 " Change terminal's title
 set title
+
+" Enable line numbers on NERDTree
+let NERDTreeShowLineNumbers=1
+autocmd FileType nerdtree setlocal relativenumber
+
+" Hide 'Press ? for help' on NERDTree
+let NERDTreeMinimalUI = 1
+
+" Change NERDTree size
+let NERDTreeWinSize=35

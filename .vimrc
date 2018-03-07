@@ -58,7 +58,7 @@ let python_highlight_all=1
 " Fix autoindentation for using spaces
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 
-" Fix backspace problems
+" Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
 " Enable buffer list

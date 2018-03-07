@@ -43,7 +43,7 @@ call plug#end()
 let g:jsx_ext_required = 0
 
 " Load NERDTree on startup
-autocmd vimenter * NERDTree
+autocmd vimenter * NERDTree %:p:h
 autocmd VimEnter * wincmd p
 
 " Show hidden files on NERDTree

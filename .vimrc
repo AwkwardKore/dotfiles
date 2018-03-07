@@ -64,8 +64,9 @@ set backspace=indent,eol,start
 " Enable buffer list
 let g:airline#extensions#tabline#enabled=1
 
-" Show only the filename on buffer list
+" Show only the filename and buffer number on buffer list
 let g:airline#extensions#tabline#fnamemod=':t'
+let g:airline#extensions#tabline#buffer_nr_show=1
 
 " Show end of line character
 set listchars=tab:→\ ,trail:·

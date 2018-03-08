@@ -103,3 +103,14 @@ let g:ctrlp_use_caching = 0
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" --hidden $1'
 endif
+
+" Expand spaces to nothing on ctrl-p
+let g:ctrlp_abbrev = {
+  \ 'abbrevs': [
+    \ {
+      \ 'pattern': ' ',
+      \ 'expanded': '',
+      \ 'mode': 'fprz',
+    \ },
+  \ ]
+\ }

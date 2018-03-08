@@ -97,3 +97,9 @@ let NERDTreeMinimalUI=1
 
 " Change NERDTree size
 let NERDTreeWinSize=35
+
+" Disable caching on ctrl-p and use silver searcher
+let g:ctrlp_use_caching = 0
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" --hidden $1'
+endif

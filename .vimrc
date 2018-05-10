@@ -123,3 +123,6 @@ set background=dark
 set termguicolors
 colorscheme material-monokai
 let g:airline_theme='materialmonokai'
+
+" Map Ctrl-n to toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>

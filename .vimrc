@@ -40,6 +40,9 @@ Plug 'kien/ctrlp.vim'
 " Git wrapper
 Plug 'tpope/vim-fugitive'
 
+" Vim material monokai theme
+Plug 'https://github.com/skielbasa/vim-material-monokai'
+
 call plug#end()
 
 " Enable jsx syntax on .js files
@@ -67,9 +70,12 @@ set backspace=indent,eol,start
 " Enable buffer list
 let g:airline#extensions#tabline#enabled=1
 
-" Show only the filename and buffer number on buffer list
-let g:airline#extensions#tabline#fnamemod=':t'
+" Show only the filename with extension on buffer list
+let g:airline#extensions#tabline#formatter='unique_tail'
+
+" Show the buffer number on buffer list
 let g:airline#extensions#tabline#buffer_nr_show=1
+let g:airline#extensions#tabline#buffer_nr_format='%s '
 
 " Show end of line character
 set listchars=tab:→\ ,trail:·
@@ -111,3 +117,9 @@ let g:ctrlp_abbrev = {
     \ },
   \ ]
 \ }
+
+" Configure theme to use material-monokai
+set background=dark
+set termguicolors
+colorscheme material-monokai
+let g:airline_theme='materialmonokai'

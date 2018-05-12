@@ -1,3 +1,6 @@
+" =========================================================
+"                         PLUGINS
+" =========================================================
 call plug#begin('~/.vim/plugged')
 
 " HTML syntax
@@ -41,12 +44,36 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 
 " Vim material monokai theme
-Plug 'https://github.com/skielbasa/vim-material-monokai'
+Plug 'https://github.com/AwkwardKore/vim-material-monokai.git'
 
 call plug#end()
 
-" Enable jsx syntax on .js files
-let g:jsx_ext_required=0
+" =========================================================
+"                   GENERAL SETTINGS
+" =========================================================
+
+" Change autoindentation to use spaces
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+
+" Allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" Show end of line character
+set listchars=tab:→\ ,trail:·
+
+" Display line on current line
+set cursorline
+
+" Change terminal's title
+set title
+
+" Use relative number
+set relativenumber
+set number
+
+" =========================================================
+"                       NERDTREE
+" =========================================================
 
 " Load NERDTree on startup
 autocmd vimenter * NERDTree %:p:h
@@ -58,14 +85,32 @@ let NERDTreeShowHidden=1
 " Hide specific files on NERDTree
 let NERDTreeIgnore=['\.DS_Store$', '\.swp$', '\.git$']
 
+" Enable line numbers on NERDTree
+let NERDTreeShowLineNumbers=1
+autocmd FileType nerdtree setlocal relativenumber
+
+" Hide 'Press ? for help' on NERDTree
+let NERDTreeMinimalUI=1
+
+" Change NERDTree size
+let NERDTreeWinSize=35
+
+" Map Ctrl-n to toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" =========================================================
+"                  SYNTAX HIGHLIGHTING
+" =========================================================
+
+" Enable jsx syntax on .js files
+let g:jsx_ext_required=0
+
 " Enable all python highlight
 let python_highlight_all=1
 
-" Fix autoindentation for using spaces
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
-
-" Allow backspacing over everything in insert mode
-set backspace=indent,eol,start
+" =========================================================
+"                     VIM-AIRLINE
+" =========================================================
 
 " Enable buffer list
 let g:airline#extensions#tabline#enabled=1
@@ -77,37 +122,19 @@ let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline#extensions#tabline#buffer_nr_format='%s '
 
-" Show end of line character
-set listchars=tab:→\ ,trail:·
-set list
+" =========================================================
+"                   CTRLP FUZZY FINDER
+" =========================================================
 
-" Use relative number
-set relativenumber
-set number
-
-" Display line on current line
-set cursorline
-
-" Change terminal's title
-set title
-
-" Enable line numbers on NERDTree
-let NERDTreeShowLineNumbers=1
-autocmd FileType nerdtree setlocal relativenumber
-
-" Hide 'Press ? for help' on NERDTree
-let NERDTreeMinimalUI=1
-
-" Change NERDTree size
-let NERDTreeWinSize=35
-
-" Disable caching on ctrl-p and use silver searcher
+" Disable caching
 let g:ctrlp_use_caching = 0
+
+" Use silver searcher
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" --hidden $1'
 endif
 
-" Expand spaces to nothing on ctrl-p
+" Ignore spaces
 let g:ctrlp_abbrev = {
   \ 'abbrevs': [
     \ {
@@ -118,11 +145,12 @@ let g:ctrlp_abbrev = {
   \ ]
 \ }
 
+" =========================================================
+"                         THEME
+" =========================================================
+
 " Configure theme to use material-monokai
 set background=dark
 set termguicolors
 colorscheme material-monokai
 let g:airline_theme='materialmonokai'
-
-" Map Ctrl-n to toggle NERDTree
-map <C-n> :NERDTreeToggle<CR>

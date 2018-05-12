@@ -71,6 +71,9 @@ set title
 set relativenumber
 set number
 
+" Change key code delays
+set ttimeoutlen=10
+
 " =========================================================
 "                       NERDTREE
 " =========================================================
@@ -121,6 +124,9 @@ let g:airline#extensions#tabline#formatter='unique_tail'
 " Show the buffer number on buffer list
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline#extensions#tabline#buffer_nr_format='%s '
+
+" Reload buffer list when deleting buffers
+autocmd BufDelete * call airline#extensions#tabline#buflist#invalidate()
 
 " =========================================================
 "                   CTRLP FUZZY FINDER

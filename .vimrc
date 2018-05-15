@@ -74,6 +74,9 @@ set number
 " Change key code delays
 set ttimeoutlen=10
 
+" Change updatetime to 100 ms
+set updatetime=100
+
 " =========================================================
 "                       NERDTREE
 " =========================================================

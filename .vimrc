@@ -101,6 +101,9 @@ let NERDTreeWinSize=35
 " Map Ctrl-n to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
+" Display 'NERDTree' on NERDTree status line instead of root path
+let g:NERDTreeStatusline='NERDTree'
+
 " =========================================================
 "                  SYNTAX HIGHLIGHTING
 " =========================================================

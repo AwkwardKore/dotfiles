@@ -46,6 +46,9 @@ Plug 'tpope/vim-fugitive'
 " Vim material monokai theme
 Plug 'https://github.com/AwkwardKore/vim-material-monokai.git'
 
+" Change surrounding
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 " =========================================================

@@ -63,6 +63,7 @@ set backspace=indent,eol,start
 
 " Show end of line character
 set listchars=tab:→\ ,trail:·
+set list
 
 " Display line on current line
 set cursorline

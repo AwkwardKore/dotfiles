@@ -58,6 +58,9 @@ call plug#end()
 " Change autoindentation to use spaces
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 
+" Use 4 tab spaces when using .php extension
+au FileType php set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 

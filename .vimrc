@@ -84,6 +84,20 @@ set ttimeoutlen=10
 " Change updatetime to 100 ms
 set updatetime=100
 
+" Setup persistent undo
+call system("mkdir -p $HOME/.vim/undo")
+set undodir=$HOME/.vim/undo/
+set undofile
+
+" Hide buffers instead of closing them when moving between buffers
+set hidden
+
+" Remember more commands and search history
+set history=1000
+
+" Modify the maximum number of changes that can be undone
+set undolevels=1000
+
 " =========================================================
 "                       NERDTREE
 " =========================================================

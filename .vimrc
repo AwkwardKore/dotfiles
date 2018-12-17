@@ -49,6 +49,9 @@ Plug 'https://github.com/AwkwardKore/vim-material-monokai.git'
 " Change surrounding
 Plug 'tpope/vim-surround'
 
+" Blade syntax
+Plug 'jwalton512/vim-blade'
+
 call plug#end()
 
 " =========================================================

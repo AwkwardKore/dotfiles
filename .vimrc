@@ -101,6 +101,12 @@ set history=1000
 " Modify the maximum number of changes that can be undone
 set undolevels=1000
 
+" Remap movement between splits for easier navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " =========================================================
 "                       NERDTREE
 " =========================================================

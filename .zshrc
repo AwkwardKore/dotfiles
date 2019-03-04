@@ -93,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias vimconfig="vim ~/dotfiles/.vimrc"
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="vim ~/dotfiles/.zshrc"
 alias gpvimconfig="(cd ~/dotfiles && git add .vimrc && git commit && git push origin master)"
 alias gfdotfiles="(cd ~/dotfiles && git pull origin master)"
 alias findswp="find . -type f -name '*.swp'"

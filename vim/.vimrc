@@ -58,6 +58,9 @@ call plug#end()
 "                   GENERAL SETTINGS
 " =========================================================
 
+" Set encoding to utf-8
+set encoding=utf-8
+
 " Change autoindentation to use spaces
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 

@@ -23,7 +23,7 @@ Plug 'kh3phr3n/python-syntax'
 Plug 'https://github.com/pangloss/vim-javascript.git'
 
 " JSX syntax
-Plug 'mxw/vim-jsx'
+Plug 'maxmellon/vim-jsx-pretty'
 
 " NERDTree
 Plug 'https://github.com/scrooloose/nerdtree.git'

@@ -52,6 +52,9 @@ Plug 'tpope/vim-surround'
 " Blade syntax
 Plug 'jwalton512/vim-blade'
 
+" Dart lang plugin
+Plug 'dart-lang/dart-vim-plugin'
+
 call plug#end()
 
 " =========================================================

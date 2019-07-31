@@ -1,0 +1,7 @@
+# General
+.DS_Store
+
+# Text editor files
+*.swp
+*.swo
+*.swn

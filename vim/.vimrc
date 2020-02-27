@@ -49,9 +49,6 @@ Plug 'https://github.com/AwkwardKore/vim-material-monokai.git'
 " Change surrounding
 Plug 'tpope/vim-surround'
 
-" Dart lang plugin
-Plug 'dart-lang/dart-vim-plugin'
-
 call plug#end()
 
 " =========================================================

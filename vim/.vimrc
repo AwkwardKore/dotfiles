@@ -112,8 +112,8 @@ nnoremap <C-H> <C-W><C-H>
 " =========================================================
 
 " Load NERDTree on startup
-autocmd vimenter * NERDTree %:p:h
-autocmd VimEnter * wincmd p
+" autocmd vimenter * NERDTree %:p:h
+" autocmd VimEnter * wincmd p
 
 " Show hidden files on NERDTree
 let NERDTreeShowHidden=1

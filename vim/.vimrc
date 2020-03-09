@@ -52,6 +52,9 @@ Plug 'tpope/vim-surround'
 " Vue.js syntax highlighting
 Plug 'posva/vim-vue'
 
+" Emmet plugin for expanding abbreviations
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 " =========================================================

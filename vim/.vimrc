@@ -49,6 +49,9 @@ Plug 'https://github.com/AwkwardKore/vim-material-monokai.git'
 " Change surrounding
 Plug 'tpope/vim-surround'
 
+" Vue.js syntax highlighting
+Plug 'posva/vim-vue'
+
 call plug#end()
 
 " =========================================================

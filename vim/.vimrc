@@ -22,9 +22,6 @@ Plug 'kh3phr3n/python-syntax'
 " Javascript syntax
 Plug 'https://github.com/pangloss/vim-javascript.git'
 
-" JSX syntax
-Plug 'maxmellon/vim-jsx-pretty'
-
 " NERDTree
 Plug 'https://github.com/scrooloose/nerdtree.git'
 
@@ -66,9 +63,6 @@ set encoding=utf-8
 
 " Change autoindentation to use spaces
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
-
-" Use 4 tab spaces when using .php extension
-au FileType php set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -117,10 +111,6 @@ nnoremap <C-H> <C-W><C-H>
 "                       NERDTREE
 " =========================================================
 
-" Load NERDTree on startup
-" autocmd vimenter * NERDTree %:p:h
-" autocmd VimEnter * wincmd p
-
 " Show hidden files on NERDTree
 let NERDTreeShowHidden=1
 
@@ -146,9 +136,6 @@ let g:NERDTreeStatusline='NERDTree'
 " =========================================================
 "                  SYNTAX HIGHLIGHTING
 " =========================================================
-
-" Enable jsx syntax on .js files
-let g:jsx_ext_required=0
 
 " Enable all python highlight
 let python_highlight_all=1

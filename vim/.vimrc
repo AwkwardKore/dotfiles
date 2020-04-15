@@ -6,18 +6,8 @@ call plug#begin('~/.vim/plugged')
 " HTML syntax
 Plug 'othree/html5.vim'
 
-" CSS and SCSS syntax
-Plug 'JulesWang/css.vim'
-Plug 'cakebaker/scss-syntax.vim'
-
-" Ruby syntax
-Plug 'vim-ruby/vim-ruby'
-
 " Rails plugin
 Plug 'tpope/vim-rails'
-
-" Python syntax
-Plug 'kh3phr3n/python-syntax'
 
 " Javascript syntax
 Plug 'pangloss/vim-javascript'

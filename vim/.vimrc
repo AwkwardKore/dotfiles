@@ -133,6 +133,9 @@ let g:NERDTreeStatusline='NERDTree'
 " Enable all python highlight
 let python_highlight_all=1
 
+" List of vue pre-processors
+let g:vue_pre_processors = ['scss']
+
 " =========================================================
 "                     VIM-AIRLINE
 " =========================================================

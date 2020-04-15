@@ -14,16 +14,16 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'vim-ruby/vim-ruby'
 
 " Rails plugin
-Plug 'https://github.com/tpope/vim-rails.git'
+Plug 'tpope/vim-rails'
 
 " Python syntax
 Plug 'kh3phr3n/python-syntax'
 
 " Javascript syntax
-Plug 'https://github.com/pangloss/vim-javascript.git'
+Plug 'pangloss/vim-javascript'
 
 " NERDTree
-Plug 'https://github.com/scrooloose/nerdtree.git'
+Plug 'preservim/nerdtree'
 
 " NERDTree-git-plugin
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -41,7 +41,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 
 " Vim material monokai theme
-Plug 'https://github.com/AwkwardKore/vim-material-monokai.git'
+Plug 'AwkwardKore/vim-material-monokai'
 
 " Change surrounding
 Plug 'tpope/vim-surround'

@@ -12,6 +12,9 @@ Plug 'tpope/vim-rails'
 " Javascript syntax
 Plug 'pangloss/vim-javascript'
 
+" SCSS syntax highligh
+Plug 'cakebaker/scss-syntax.vim'
+
 " NERDTree
 Plug 'preservim/nerdtree'
 

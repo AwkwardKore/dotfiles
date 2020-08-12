@@ -40,7 +40,7 @@ Plug 'AwkwardKore/vim-material-monokai'
 Plug 'tpope/vim-surround'
 
 " Vue.js syntax highlighting
-Plug 'posva/vim-vue'
+Plug 'leafOfTree/vim-vue-plugin'
 
 " Emmet plugin for expanding abbreviations
 Plug 'mattn/emmet-vim'
@@ -133,8 +133,11 @@ let g:NERDTreeStatusline='NERDTree'
 " Enable all python highlight
 let python_highlight_all=1
 
-" List of vue pre-processors
-let g:vue_pre_processors = ['scss']
+" Load all syntax files in runtimepath to enable related syntax plugins
+let g:vim_vue_plugin_load_full_syntax=1
+
+" Enable sass syntax on vue files
+let g:vim_vue_plugin_use_scss=1
 
 " =========================================================
 "                     VIM-AIRLINE

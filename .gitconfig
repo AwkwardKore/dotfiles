@@ -1,0 +1,8 @@
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[user]
+  name = Rolando Islas
+  email = dani.islas96@gmail.com
+[pager]
+  branch = false

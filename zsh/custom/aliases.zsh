@@ -9,5 +9,3 @@ alias gfdotfiles="(cd ~/dotfiles && git pull origin master)"
 # Swap files for vim
 alias findswp="find . -type f -name '*.swp'"
 alias delswp="find . -type f -name '*.swp' -delete"
-
-# Connect to remote servers (protected)

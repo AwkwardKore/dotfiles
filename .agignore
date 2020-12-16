@@ -1,5 +1,14 @@
-android
-ios
 node_modules
 bower_components
-git
+dist
+
+.DS_Store
+
+.git
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

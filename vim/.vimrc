@@ -12,6 +12,12 @@ Plug 'tpope/vim-rails'
 " Javascript syntax
 Plug 'pangloss/vim-javascript'
 
+" Typescript syntax
+Plug 'leafgarland/typescript-vim'
+
+" TSX syntax support
+Plug 'peitalin/vim-jsx-typescript'
+
 " SCSS syntax highlight
 Plug 'cakebaker/scss-syntax.vim'
 

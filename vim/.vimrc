@@ -94,6 +94,9 @@ set undofile
 " Hide buffers instead of closing them when moving between buffers
 set hidden
 
+" Ask to save changes when closing buffer with unsaved changes
+set confirm
+
 " Remember more commands and search history
 set history=1000
 

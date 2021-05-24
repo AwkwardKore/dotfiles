@@ -1,9 +1,9 @@
 # ZSH custom folder for oh-my-zsh
 
-1. Delete example custom folder from oh-my-zsh
+1. Create symlink of custom folder
 
-    ```$ rm -rf ~/.oh-my-zsh/custom```
+    ```$ ln -s {absolute_path_to_repo}/dotfiles/zsh/custom ~/.oh-my-zsh/{zsh_custom_path}```
 
-2. Create symlink of custom folder
+2. Change custom folder path on .zshrc file
 
-    ```$ ln -s {absolute_path_to_repo}/dotfiles/zsh/custom ~/.oh-my-zsh```
+    ``` ZSH_CUSTOM=/path/to/new-custom-folder ```

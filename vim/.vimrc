@@ -139,6 +139,13 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeStatusline='NERDTree'
 
 " =========================================================
+"                        EMMET
+" =========================================================
+
+" Change emmet leader key from <C-Y> to ,
+let g:user_emmet_leader_key=','
+
+" =========================================================
 "                  SYNTAX HIGHLIGHTING
 " =========================================================
 

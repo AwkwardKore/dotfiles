@@ -18,6 +18,9 @@ Plug 'leafgarland/typescript-vim'
 " TSX syntax support
 Plug 'peitalin/vim-jsx-typescript'
 
+" JSX syntax highlight
+Plug 'mxw/vim-jsx'
+
 " SCSS syntax highlight
 Plug 'cakebaker/scss-syntax.vim'
 

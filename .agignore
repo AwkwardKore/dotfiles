@@ -7,6 +7,7 @@ dist
 .git
 .idea
 .vscode
+.next
 *.suo
 *.ntvs*
 *.njsproj

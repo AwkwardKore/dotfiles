@@ -25,7 +25,7 @@ Plug 'mxw/vim-jsx'
 Plug 'cakebaker/scss-syntax.vim'
 
 " NERDTree
-Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree', { 'tag': '6.10.10' }
 
 " NERDTree-git-plugin
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -49,7 +49,7 @@ Plug 'AwkwardKore/vim-material-monokai'
 Plug 'tpope/vim-surround'
 
 " Vue.js syntax highlighting
-Plug 'leafOfTree/vim-vue-plugin'
+Plug 'leafOfTree/vim-vue-plugin', { 'tag': 'v2021_03_29' }
 
 " Emmet plugin for expanding abbreviations
 Plug 'mattn/emmet-vim'

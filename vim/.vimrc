@@ -54,6 +54,9 @@ Plug 'leafOfTree/vim-vue-plugin', { 'tag': 'v2021_03_29' }
 " Emmet plugin for expanding abbreviations
 Plug 'mattn/emmet-vim'
 
+" Conquer of Completion
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
 call plug#end()
 
 " =========================================================
@@ -137,6 +140,12 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Display 'NERDTree' on NERDTree status line instead of root path
 let g:NERDTreeStatusline='NERDTree'
+
+" =========================================================
+"                 Conquer of Completion
+" =========================================================
+
+let g:coc_global_extensions=['coc-tsserver']
 
 " =========================================================
 "                        EMMET

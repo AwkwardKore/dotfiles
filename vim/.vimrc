@@ -145,6 +145,10 @@ let g:NERDTreeStatusline='NERDTree'
 " Change emmet leader key from <C-Y> to ,
 let g:user_emmet_leader_key=','
 
+" Enable only on javascript, html and css files
+let g:user_emmet_install_global=0
+autocmd FileType html,css,javascript,javascript.jsx,typescript EmmetInstall
+
 " =========================================================
 "                  SYNTAX HIGHLIGHTING
 " =========================================================

@@ -162,6 +162,10 @@ let g:vim_vue_plugin_load_full_syntax=1
 " Enable sass syntax on vue files
 let g:vim_vue_plugin_use_scss=1
 
+" Force rescan of buffer when highlighting
+autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
+
 " =========================================================
 "                     VIM-AIRLINE
 " =========================================================

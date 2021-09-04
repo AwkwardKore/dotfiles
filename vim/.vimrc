@@ -43,7 +43,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 
 " Vim material monokai theme
-Plug 'crusoexia/vim-monokai'
+Plug 'AwkwardKore/vim-monokai'
 
 " Change surrounding
 Plug 'tpope/vim-surround'

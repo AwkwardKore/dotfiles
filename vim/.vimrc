@@ -13,7 +13,7 @@ Plug 'tpope/vim-rails'
 Plug 'pangloss/vim-javascript'
 
 " Typescript syntax
-Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 
 " TSX syntax support
 Plug 'peitalin/vim-jsx-typescript'
@@ -43,7 +43,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 
 " Vim material monokai theme
-Plug 'AwkwardKore/vim-material-monokai'
+Plug 'crusoexia/vim-monokai'
 
 " Change surrounding
 Plug 'tpope/vim-surround'
@@ -211,8 +211,8 @@ let g:vim_vue_plugin_load_full_syntax=1
 let g:vim_vue_plugin_use_scss=1
 
 " Force rescan of buffer when highlighting
-autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
-autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
+" autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
+" autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
 
 " =========================================================
 "                     VIM-AIRLINE
@@ -258,11 +258,17 @@ let g:ctrlp_abbrev = {
 "                         THEME
 " =========================================================
 
-" Configure theme to use material-monokai
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set background=dark
+syntax enable
+
+if exists("$TMUX")
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
+" Color support
 set t_Co=256
-set termguicolors
-colorscheme material-monokai
-let g:airline_theme='materialmonokai'
+if (has('termguicolors'))
+  set termguicolors
+endif
+
+colorscheme monokai

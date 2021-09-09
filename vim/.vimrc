@@ -3,29 +3,14 @@
 " =========================================================
 call plug#begin('~/.vim/plugged')
 
-" HTML syntax
-Plug 'othree/html5.vim'
-
-" Rails plugin
-Plug 'tpope/vim-rails'
-
 " Javascript syntax
 Plug 'pangloss/vim-javascript'
 
-" Typescript syntax
-Plug 'HerringtonDarkholme/yats.vim'
-
-" TSX syntax support
-Plug 'peitalin/vim-jsx-typescript'
-
 " JSX syntax highlight
-Plug 'mxw/vim-jsx'
-
-" SCSS syntax highlight
-Plug 'cakebaker/scss-syntax.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 
 " NERDTree
-Plug 'preservim/nerdtree', { 'tag': '6.10.10' }
+Plug 'preservim/nerdtree'
 
 " NERDTree-git-plugin
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -49,7 +34,7 @@ Plug 'AwkwardKore/vim-monokai'
 Plug 'tpope/vim-surround'
 
 " Vue.js syntax highlighting
-Plug 'leafOfTree/vim-vue-plugin', { 'tag': 'v2021_03_29' }
+Plug 'leafOfTree/vim-vue-plugin'
 
 " Emmet plugin for expanding abbreviations
 Plug 'mattn/emmet-vim'
@@ -195,24 +180,25 @@ let g:user_emmet_leader_key=','
 
 " Enable only on javascript, html and css files
 let g:user_emmet_install_global=0
-autocmd FileType html,css,javascript,javascript.jsx,typescript EmmetInstall
+autocmd FileType html,css,javascript,javascript.jsx,typescript,typescriptreact,vue EmmetInstall
 
 " =========================================================
 "                  SYNTAX HIGHLIGHTING
 " =========================================================
 
-" Enable all python highlight
-let python_highlight_all=1
-
-" Load all syntax files in runtimepath to enable related syntax plugins
-let g:vim_vue_plugin_load_full_syntax=1
-
-" Enable sass syntax on vue files
-let g:vim_vue_plugin_use_scss=1
-
-" Force rescan of buffer when highlighting
-" autocmd BufEnter *.{js,jsx,ts,tsx,vue} :syntax sync fromstart
-" autocmd BufLeave *.{js,jsx,ts,tsx,vue} :syntax sync clear
+let g:vim_vue_plugin_config = {
+\ 'syntax': {
+\   'template': ['html'],
+\   'script': ['javascript'],
+\   'style': ['scss'],
+\ },
+\ 'full_syntax': [],
+\ 'initial_indent': [],
+\ 'attribute': 0,
+\ 'keyword': 0,
+\ 'foldexpr': 0,
+\ 'debug': 0,
+\}
 
 " =========================================================
 "                     VIM-AIRLINE

@@ -226,6 +226,8 @@ nnoremap <silent> <C-a> :Ag<CR>
 nnoremap <silent> <C-s> :Ag <c-r>=expand("<cword>")<cr><CR>
 nnoremap <silent> <C-c> :Commits<CR>
 
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--exact --delimiter : --nth 4..'}, 'up:50%'), <bang>0)
+
 " =========================================================
 "                         THEME
 " =========================================================

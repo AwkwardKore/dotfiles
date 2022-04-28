@@ -21,9 +21,6 @@ Plug 'vim-airline/vim-airline'
 " Use gitgutter for git information on editor
 Plug 'airblade/vim-gitgutter'
 
-" Use ctrl p for fuzzy finder
-Plug 'kien/ctrlp.vim'
-
 " Git wrapper
 Plug 'tpope/vim-fugitive'
 
@@ -41,6 +38,9 @@ Plug 'mattn/emmet-vim'
 
 " Conquer of Completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -157,19 +157,17 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Show documentation on hover or diagnostic if it exists
-function! ShowDocIfNoDiagnostic(timer_id)
-  if (coc#float#has_float() == 0 && CocHasProvider('hover') == 1)
-    silent call CocActionAsync('doHover')
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
   endif
 endfunction
 
-function! s:show_hover_doc()
-  call timer_start(100, 'ShowDocIfNoDiagnostic')
-endfunction
-
-autocmd CursorHoldI * :call <SID>show_hover_doc()
-autocmd CursorHold * :call <SID>show_hover_doc()
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " =========================================================
 "                        EMMET
@@ -218,27 +216,15 @@ let g:airline#extensions#tabline#buffer_nr_format='%s '
 autocmd BufDelete * call airline#extensions#tabline#buflist#invalidate()
 
 " =========================================================
-"                   CTRLP FUZZY FINDER
+"                   FZF FUZZY FINDER
 " =========================================================
 
-" Disable caching
-let g:ctrlp_use_caching = 0
-
-" Use silver searcher
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" --hidden $1 -U'
-endif
-
-" Ignore spaces
-let g:ctrlp_abbrev = {
-  \ 'abbrevs': [
-    \ {
-      \ 'pattern': ' ',
-      \ 'expanded': '',
-      \ 'mode': 'fprz',
-    \ },
-  \ ]
-\ }
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-o> :Buffers<CR>
+nnoremap <silent> <C-i> :GFiles?<CR>
+nnoremap <silent> <C-a> :Ag<CR>
+nnoremap <silent> <C-s> :Ag <c-r>=expand("<cword>")<cr><CR>
+nnoremap <silent> <C-c> :Commits<CR>
 
 " =========================================================
 "                         THEME

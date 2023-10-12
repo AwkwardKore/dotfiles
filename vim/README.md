@@ -4,6 +4,6 @@
 
     ```$ brew install vim```
 
-2. Install coc-tsserver for vim:
+2. For syntax highlight on fzf, install bat:
 
-    ```:CocInstall coc-tsserver```
+    ```$ brew install bat```

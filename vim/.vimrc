@@ -1,7 +1,7 @@
 " =========================================================
 "                         PLUGINS
 " =========================================================
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 " Javascript syntax
 Plug 'pangloss/vim-javascript'
@@ -233,6 +233,8 @@ command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'opti
 " =========================================================
 "                         THEME
 " =========================================================
+
+set re=0
 
 syntax enable
 

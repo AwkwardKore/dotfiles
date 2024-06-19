@@ -8,6 +8,4 @@
 
     ```$ brew install bat```
 
-3. Set noselect default behavior for coc autocomplete:
-    1. ```:CocConfig```
-    2. Set ```"suggest.noselect": true``` on json
+3. Link ```coc-settings.json``` to ```.vim/coc-settings.json```;

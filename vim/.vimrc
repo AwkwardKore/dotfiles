@@ -9,6 +9,9 @@ Plug 'pangloss/vim-javascript'
 " JSX syntax highlight
 Plug 'maxmellon/vim-jsx-pretty'
 
+" Graphql syntax highlight
+Plug 'jparise/vim-graphql'
+
 " NERDTree
 Plug 'preservim/nerdtree'
 
@@ -17,6 +20,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Use vim-airline for status bar
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Use gitgutter for git information on editor
 Plug 'airblade/vim-gitgutter'
@@ -125,6 +129,7 @@ let NERDTreeWinSize=35
 
 " Map Ctrl-n to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
+map <C-m> :NERDTreeFind<CR>
 
 " Display 'NERDTree' on NERDTree status line instead of root path
 let g:NERDTreeStatusline='NERDTree'
@@ -133,7 +138,7 @@ let g:NERDTreeStatusline='NERDTree'
 "                 Conquer of Completion
 " =========================================================
 
-let g:coc_global_extensions=['coc-tsserver']
+let g:coc_global_extensions=['coc-tsserver', 'coc-eslint', 'coc-prettier']
 
 " Use '[g' and ']g' to navigate between diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -163,6 +168,9 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call ShowDocumentation()<CR>
+
+" Use F for mapping COC-quickfix
+nnoremap <silent> F <Plug>(coc-fix-current)
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
@@ -208,14 +216,16 @@ let g:vim_vue_plugin_config = {
 let g:airline#extensions#tabline#enabled=1
 
 " Show only the filename with extension on buffer list
-let g:airline#extensions#tabline#formatter='unique_tail'
+let g:airline#extensions#tabline#formatter='short_path'
 
 " Show the buffer number on buffer list
-let g:airline#extensions#tabline#buffer_nr_show=1
-let g:airline#extensions#tabline#buffer_nr_format='%s '
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Reload buffer list when deleting buffers
 autocmd BufDelete * call airline#extensions#tabline#buflist#invalidate()
+
+" Theme
+let g:airline_theme='base16_monokai'
 
 " =========================================================
 "                   FZF FUZZY FINDER

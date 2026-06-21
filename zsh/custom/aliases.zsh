@@ -1,6 +1,6 @@
-# Open config files
-alias vimconfig="vim ~/.vimrc"
-alias zshconfig="vim ~/.zshrc"
+# Use nvim instead of vim
+alias vi="nvim"
+alias vim="nvim"
 
 # Swap files for vim
 alias findswp="find . -type f -name '*.swp'"

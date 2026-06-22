@@ -18,6 +18,9 @@ Plug 'preservim/nerdtree'
 " NERDTree-git-plugin
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+" Icons for NerdTree
+Plug 'ryanoasis/vim-devicons'
+
 " Use vim-airline for status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -137,6 +140,9 @@ map <C-m> :NERDTreeFind<CR>
 
 " Display 'NERDTree' on NERDTree status line instead of root path
 let g:NERDTreeStatusline='NERDTree'
+
+" Use minimal menu
+let g:NERDTreeMinimalMenu=1
 
 " =========================================================
 "                 CONQUER OF COMPLETION

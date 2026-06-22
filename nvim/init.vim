@@ -22,6 +22,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Bufferline
+Plug 'akinsho/bufferline.nvim'
+
 " Use gitgutter for git information on editor
 Plug 'airblade/vim-gitgutter'
 
@@ -136,7 +139,7 @@ map <C-m> :NERDTreeFind<CR>
 let g:NERDTreeStatusline='NERDTree'
 
 " =========================================================
-"                 Conquer of Completion
+"                 CONQUER OF COMPLETION
 " =========================================================
 
 let g:coc_global_extensions=['coc-tsserver', 'coc-eslint', 'coc-prettier']
@@ -184,23 +187,22 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " =========================================================
-"                     VIM-AIRLINE
+"                     BUFFERLINE
 " =========================================================
 
-" Enable buffer list
-let g:airline#extensions#tabline#enabled=1
+set termguicolors
 
-" Show only the filename with extension on buffer list
-let g:airline#extensions#tabline#formatter='short_path'
-
-" Show the buffer number on buffer list
-let g:airline#extensions#tabline#buffer_nr_show = 1
-
-" Reload buffer list when deleting buffers
-autocmd BufDelete * call airline#extensions#tabline#buflist#invalidate()
-
-" Theme
-let g:airline_theme='base16_monokai'
+lua << EOF
+require("bufferline").setup{
+  options = {
+    numbers = "buffer_id",
+    show_buffer_close_icons = false,
+    show_close_icon = false,
+    right_mouse_command = false,
+    left_mouse_command = false
+  }
+}
+EOF
 
 " =========================================================
 "                   FZF FUZZY FINDER

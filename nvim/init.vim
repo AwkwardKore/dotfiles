@@ -192,6 +192,9 @@ endfunction
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" Create command :Prettier for file formatting
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
 " =========================================================
 "                     BUFFERLINE
 " =========================================================

@@ -28,9 +28,6 @@ Plug 'airblade/vim-gitgutter'
 " Git wrapper
 Plug 'tpope/vim-fugitive'
 
-" Vim material monokai theme
-Plug 'AwkwardKore/vim-monokai'
-
 " Change surrounding
 Plug 'tpope/vim-surround'
 
@@ -40,8 +37,15 @@ Plug 'prisma/vim-prisma'
 " Conquer of Completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
+" Fuzzy Finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" Lint integration
+Plug 'esmuellert/nvim-eslint'
+
+" Theme
+Plug 'navarasu/onedark.nvim'
 
 call plug#end()
 
@@ -215,19 +219,8 @@ command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'opti
 "                         THEME
 " =========================================================
 
-set re=0
+let g:onedark_config = {
+    \ 'style': 'darker',
+\}
 
-syntax enable
-
-if exists("$TMUX")
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
-
-" Color support
-set t_Co=256
-if (has('termguicolors'))
-  set termguicolors
-endif
-
-colorscheme monokai
+colorscheme onedark

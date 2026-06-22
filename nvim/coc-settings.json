@@ -1,0 +1,9 @@
+{
+  "suggest.noselect": true,
+  "coc.preferences.formatOnSave": true,
+  "diagnostic.enable": true,
+  "diagnostic.errorSign": "✗",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "ℹ",
+  "diagnostic.hintSign": "➤"
+}
